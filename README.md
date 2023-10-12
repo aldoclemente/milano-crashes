@@ -1,7 +1,6 @@
 # milano-crashes
 
-
-2. clone this repository and install. From a terminal, execute
+To clone this repository run from a terminal:
 
     ``` 
 	  git clone --recurse-submodules -b main git@github.com:aldoclemente/milano-crashes.git
