@@ -120,8 +120,8 @@ GSR_PDE <- smooth.FEM(incidence_matrix=incidence_matrix, observations=response,
 lambda_opt <- GSR_PDE$optimization$lambda_position
 plot(log10(lambda), GSR_PDE$optimization$GCV_vector, xlab="log10(lambda)", ylab="GCV")
 
-plot(GSR_PDE$optimization$GCV_vector)
-plot(FEM(GSR_PDE$fit.FEM$coeff[,lambda_opt], FEMbasis))
+plot(FEM(GSR_PDE$fit.FEM$coeff[,lambda_opt], FEMbasis),
+     linewidth=1)  + scale_color_viridis()
 
 # GSR-PDE with covariates ------------------------------------------------------  
 # playing with data_to_edge and edge_to_region
@@ -149,6 +149,7 @@ GSR_PDE <- smooth.FEM(incidence_matrix=incidence_matrix, observations=response, 
 
 lambda_opt <- GSR_PDE$optimization$lambda_position
 plot(log10(lambda), GSR_PDE$optimization$GCV_vector, xlab="log10(lambda)", ylab="GCV")
-plot(FEM(GSR_PDE$fit.FEM$coeff[,lambda_opt], FEMbasis))
+plot(FEM(GSR_PDE$fit.FEM$coeff[,lambda_opt], FEMbasis),
+     linewidth=1)  + scale_color_viridis()
 
 
